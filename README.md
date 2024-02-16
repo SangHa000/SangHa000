@@ -12,3 +12,5 @@
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SangHa000&layout=compact"><br><br>
 <img src="https://github-readme-stats.vercel.app/api?username=SangHa000&show_icons=true&theme=noctis_minimus">
 
+
+<img src="https://img.shields.io/badge/COMPANY-%23121011?style=for-the-badge"><img src="https://img.shields.io/badge/Groom IDE-%233DC8B4?style=for-the-badge">
