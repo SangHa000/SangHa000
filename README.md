@@ -10,5 +10,5 @@
 </div>
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SangHa000&layout=compact"><br><br>
-<img src="https://github-readme-stats.vercel.app/api?username=SangHa000&show_icons=true">
+<img src="https://github-readme-stats.vercel.app/api?username=SangHa000&show_icons=true&theme=noctis_minimus">
 
