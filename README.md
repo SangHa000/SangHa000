@@ -3,7 +3,7 @@
 
 
 <div align ="center">
-	<h3>사용가능한 기술 스택!@ 👋</h3>
+	<h3>사용가능한 기술 스택! 👋</h3>
 	<img src="https://img.shields.io/badge/Python-007396?style=flat&logo=python&logoColor=white" />
 	<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
 	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
@@ -15,8 +15,8 @@
 	
 </div>
 
-### 만들수있는 챗봇!@
-<div>
+<div align ="center">
+	<h3>만들수 있는 챗봇! 👋</h3>
 	<img src="https://img.shields.io/badge/kakao-FFCD00?style=flat&logo=kakao&logoColor=white" />
 	<img src="https://img.shields.io/badge/naver-03C75A?style=flat&logo=naver&logoColor=white" />
 </div>
