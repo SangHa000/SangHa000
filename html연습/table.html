@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <!--  표를 만들때에는 <table>태그를 사용  -->
+        <table border="1">
+            <tbody>
+            <caption>인적사항</caption>  <!-- 표를 설명하는 문구  -->
+
+            <colgroup>
+                <col style="background-color: chartreuse;">
+                <col span="2" style="background-color: blue;">
+            </colgroup>
+
+            <!--  <tr> <th> <td>를 사용하여, 행과 열을 구성  -->
+                <tr style="background-color: aqua;">  <!-- tr :: 행을 추가  -->
+                    <th>이름</th>
+                    <th>성별</th>
+                    <th>생일</th>
+                </tr>
+                <tr>
+                    <td>이상하</td>
+                    <td>남성</td>
+                    <td>980331</td>
+                </tr>
+            </tbody>
+
+            <!--  <thread> <tbody>, <tfoot>  -->
+        </table>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {text-align: center;}
+</style>
+<body>
+    <form onsubmit="event.preventDefault(); MBTIcal();">
+    <h1>MBTI 출력기</h1>
+    <div>
+    <p>외향적 or 내향적?</p>
+    <input type="radio" name="extraversion" value="Extroverted"><label>외향적 (E)</label>
+    <input type="radio" name="extraversion" value="Introvert"><label>내향적 (I)</label> <br>
+    <hr>
+
+    <p>현실형 or 직관형?</p>
+    <input type="radio" name="observation" value="SRealistic"><label>현실형 (S)</label>
+    <input type="radio" name="observation" value="NIntuitive"><label>직관형 (N)</label> <br>
+    <hr>
+
+    <p>감성적 or 이성적?</p>
+    <input type="radio" name="feeling" value="Femotional"><label>감성적 (F)</label>
+    <input type="radio" name="feeling" value="Trational"><label>이성적 (T)</label> <br>
+    <hr>
+
+    <p>계획형 or 즉흥형?</p>
+    <input type="radio" name="judging" value="Jplanning"><label>계획형 (J)</label>
+    <input type="radio" name="judging" value="PImpromptu"><label>즉흥형 (P)</label> <br>
+    <hr>
+    
+    <button type="submit">MBTI 제출하기</button>
+    </div>
+    </form>
+    <script>
+        function MBTIcal(){
+            const extraversionValue = getSelectedValue(document.getElementsByName('extraversion'));
+            const observationValue = getSelectedValue(document.getElementsByName('observation'));
+            const feelingValue = getSelectedValue(document.getElementsByName('feeling'));
+            const judgingValue = getSelectedValue(document.getElementsByName('judging'));
+
+            const mbtiResult = extraversionValue.charAt(0) + observationValue.charAt(0) +
+                              feelingValue.charAt(0) + judgingValue.charAt(0);
+                              
+
+            document.write('당신의 MBTI는: ' + mbtiResult);
+        }
+
+        function getSelectedValue(buttons) {
+            for (let i = 0; i < buttons.length; i++) {
+                if (buttons[i].checked) {
+                    return buttons[i].value;
+                }
+            }
+            return '';
+        }
+    </script>
+</body>
+</html>

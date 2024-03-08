@@ -1,0 +1,43 @@
+/* 전체 선택자(*) :: html 페이지 안에있는 모드 태그들을 선택
+
+border
+
+태그 선택자 :: html에 포함되어있는 특정 태그들을 선택  */
+
+h1, h3{
+    background-color: blue;
+    font: italic;
+}
+
+
+/*  아이디 선택자 :: 특정 아이디 값을 갖고 있는 태그 선택  
+
+"#" 기호를 사용해서 선택
+*/
+
+#first_h1{
+    background-color: aqua;
+    font: bold;
+    font-size: 200px;
+}
+
+/*  클래스 선택자 :: 각 태그들의 class 값들중 특정 값이 있는 태그 선택  
+ "." 사용   클래스명을 포함만 하고있어도 적용 가능
+*/
+.first {
+    border: 10px solid black;
+}
+/* h1 태그중 클래스값 first 포함된 택만 선택*/
+
+h1,h2.first{
+text-align: center;
+}
+
+
+label [for]{
+    color: cadetblue;
+}
+
+
+
+

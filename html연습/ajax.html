@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>txt 불러오기</h1>
+    <div id="text"></div>
+    <script>
+        // ajax 통신 :: 비동기식 통신 방식
+
+        // XMLHttpRequest 객체통해서 통신
+        const xhttp=new XMLHttpRequest();
+
+        xhttp.onload =function(){
+            document.getElementById("text").innerHTML=this.responseText;
+            // ajax 통신을 통해 파일요청시 응답이 도착함
+        }
+    </script>
+</body>
+</html>

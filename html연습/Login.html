@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입 페이지</title>
+</head>
+<body>
+
+  <h2>회원가입</h2>
+
+  <form action="/submit_registration" method="post">
+    <!-- 이름 입력 -->
+    <label for="name">이름:</label>
+    <input type="text" id="name" name="name" required>
+
+    <br>
+
+    <!-- 영어 이름 입력 -->
+    <label for="englishName">영어 이름:</label>
+    <input type="text" id="englishName" name="englishName">
+
+    <br>
+
+    <!-- 성별 선택 (라디오 버튼) -->
+    <label>성별:</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">남성</label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female">여성</label>
+
+    <br>
+
+    <!-- 주민등록번호 입력 -->
+    <label for="residentNumber">주민등록번호:</label>
+    <input type="text" id="residentNumber" name="residentNumber" required>
+
+    <br>
+
+    <!-- 생년월일 입력 -->
+    <label for="birthdate">생년월일:</label>
+    <input type="date" id="birthdate" name="birthdate" required>
+
+    <br>
+
+    <!-- 이메일 입력 -->
+    <label for="email">이메일:</label>
+    <input type="email" id="email" name="email" required>
+
+    <br>
+
+    <!-- 집 전화번호 입력 -->
+    <label for="homePhone">집 전화번호:</label>
+    <input type="tel" id="homePhone" name="homePhone">
+
+    <br>
+
+    <!-- 휴대폰 번호 입력 -->
+    <label for="mobilePhone">휴대폰 번호:</label>
+    <input type="tel" id="mobilePhone" name="mobilePhone" required>
+    <button type="button" onclick="sendVerificationCode()">전화번호 인증</button>
+
+    <br>
+
+    <!-- 집 주소 검색 (도로명주소 조회 버튼 포함) -->
+    <label for="address">집 주소:</label>
+    <input type="text" id="address" name="address" placeholder="주소 검색">
+    <button type="button" onclick="searchAddress()">도로명주소 조회</button>
+
+    <br>
+
+    <!-- 상세 주소 입력 -->
+    <label for="detailAddress">상세 주소:</label>
+    <input type="text" id="detailAddress" name="detailAddress">
+
+    <br>
+
+    <!-- 알게된 경로 (체크박스) -->
+    <label>알게된 경로:</label>
+    <input type="checkbox" id="online" name="source" value="online">
+    <label for="online">온라인 광고</label>
+    <input type="checkbox" id="friend" name="source" value="friend">
+    <label for="friend">친구 추천</label>
+    <input type="checkbox" id="other" name="source" value="other">
+    <label for="other">기타</label>
+
+    <br>
+
+    <!-- 회원가입 버튼 -->
+    <input type="submit" value="회원가입">
+  </form>
+
+  <script>
+    function sendVerificationCode() {
+      // 전화번호 인증 로직을 구현할 수 있습니다.
+      // 예: 서버에 전화번호를 전송하고, 서버에서 인증 코드를 생성하여 전송하는 등의 방식
+    }
+
+    function searchAddress() {
+      // 주소 검색 로직을 구현할 수 있습니다.
+      // 예: 도로명주소 API를 활용하여 주소를 검색하는 등의 방식
+    }
+  </script>
+
+</body>
+</html>

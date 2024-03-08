@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h2>Get Set Example</h2>
+    
+    <label for="exampleInput">Type something:</label>
+    <input type="text" id="exampleInput" value="Initial Value">
+    
+    <button onclick="getValue()">Get Value</button>
+    <button onclick="setValue()">Set Value</button>
+<body>
+    <script>
+        // DOM :: Document 준말 , 브라우저 상의 페이지 (html,css)
+        
+        //get , set : 반환하다/ 설정하다
+        function getValue() {
+            // Get the value of the input field
+            var inputValue = document.getElementById("exampleInput").value;
+            alert("Current Value: " + inputValue);
+        }
+
+        function setValue() {
+            // Set a new value for the input field
+            var newValue = prompt("Enter a new value:");
+            document.getElementById("exampleInput").value = newValue;
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

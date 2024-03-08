@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023.12.29 // Review</title>
+</head>
+<body>
+    <script>
+        // let/const 객체명 ={
+            // 멤버 선언
+            // 필드(변수), 메소드(함수)
+
+            // 필드명: 필드 값
+            //메소드명 : function(){
+              //  명령문;
+            //}
+        //}
+        let coffee ={
+            esspresso: 100,
+            water: 200,
+            setCoffee: function(e,w){
+                this.esspresso=e;
+                this.water=w;
+            },
+            printCoffee:function(){
+                console.log(`에스프레소 양: ${this.esspresso}ml`);
+                console.log(`물의 양:${this.water}ml`);
+
+                if(this.esspresso*2 === this.water){
+                    console.log("적당합니다")
+                }
+                else if(this.esspresso*2 > this.water){
+                    console.log("씁니다")
+                }
+                else{
+                    console.log("맹물커피입니다.")
+                }
+            }
+        }
+
+        let ess=Number(prompt("에스프레소 양 입력",0));
+        let wat=Number(prompt("물양 입력",0));
+        coffee.setCoffee(ess,wat);
+        coffee.printCoffee();
+
+
+    </script>
+</body>
+</html>

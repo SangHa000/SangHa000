@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><span id="name">사용자명</span>님 환영합니다.</p>
+    <p id="select">선발 여부 출력</p>
+    <script>
+        // 함수 :: 특정 기능을 하는 명령문들의 집합
+        // 함수 구현
+        function returnex(){
+            example = "one"
+        }
+
+        // 20~30대 여성만 참가할수있는 과정에 참여가능한지 알아볼수있는 함수를 구현하고
+        // 실제 입력값으로 함수 실행
+
+        let name=prompt("이름을 입력해 주세요");
+        let input=prompt("나이를 입력해 주세요");
+        let age=Number(input);
+        let tf=confirm("성별이 어떻게 되는지 선택 (확인 == 남성 / 취소 == 여성)")
+        let gender= tf===true?"남성":"여성";
+
+        let element1=document.getElementById("name");
+        let element2=document.getElementById("select");
+        element1.innerHTML=name;
+
+        let condition=confirm("이대로 진행하시겠습니까?");
+        if(condition===true){
+            if(gender==="여성" && (age>=20 && age<=39)){
+                element2.innerHTML="축하드립니다. 과정에 뽑혔습니다."
+            }
+            else{
+                element2.innerHTML="탈 락"
+            }
+        }
+        else{
+            element2.innerHTML="취소를 누르셔서 다시 진행해 주십시오"
+        }
+
+        function isSuccess(a,g){
+            if(g==="여성" && (a>=20 && a<=39)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>

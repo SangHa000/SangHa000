@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  후손 선택자 :: 특정 태그 안에 있는 후손을 선택
+            [선택자1][선택자2]{선언문}
+        */
+        div h3{
+            color:blue;
+
+        }
+        #header h3,#eader>p{
+            border:3px solid red;
+        }
+
+        table>tr{
+            border:1px solid black;
+        }
+        /*  자손 선택자 :: 특정 태그 바로 안에 있는 자손을 선택
+            [선택자1]>[선택자2]{선언문}
+        */
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <th>이름</th>
+                <th>성별</th>
+            </tr>
+            <tr>
+                <td>이상하</td>
+                <td>남</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="header">
+        <h3>헤더 안의 h3</h3>
+        <div>
+            <p>헤더 안의 p</p>
+        </div>
+    </div>
+    <div id="para">
+        <h3>본문 안의 h3</h3>
+        <p>본문 안의 p</p>
+    </div>
+</body>
+</html>

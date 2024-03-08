@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<style>
+    h1,h2,h6 {text-align: center;}
+    body{
+            background-image:url(https://img.freepik.com/premium-photo/purple-wallpaper-for-iphone-is-the-best-high-definition-iphone-wallpaper-in-you-can-make-this-wallpaper-for-your-iphone-x-backgrounds-mobile-screensaver-or-ipad-lock-screen-wallpaper-screen_899894-5038.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        h1{
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        p{
+            display: inline-block;
+        }
+
+        @media screen and (max-width: 600px) {
+        body {
+        background-color: lightblue;
+        }
+}
+</style>
+<body style="background-color:greenyellow; color:white;">
+    <h1 style="background-color: white;color: black;">예제1 :: input 폼활용 회원가입 페이지 만들기</h1>
+    <div style="background-color: white; border: 3px solid aquamarine; padding:20px; width:70%; margin: auto">
+        <h2 style="color:black">회원가입 페이지에 오신것을 환영합니다!</h2>
+        <h6 style="color:black">아래의 양식에 정보를 입력해 주십시오.</h6>
+    </div>
+    <div>
+        <h3>회원 정보(USER INFORMATION)</h3>
+        <hr>
+
+        <form action="/submit_registration" method="post">
+            
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <br>
+        
+            
+            <label for="englishName">영어 이름:</label>
+            <input type="text" id="englishName" name="englishName">
+        
+            <br>
+        
+            
+            <label>성별:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">남성</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">여성</label>
+        
+            <br>
+        
+            
+            <label for="residentNumber1">주민등록번호:</label>
+            <input type="text" id="residentNumber1" name="residentNumber1" pattern="[0-9]{6}" placeholder="앞 6자리" required>
+            -
+            <input type="password" id="residentNumber2" name="residentNumber2" pattern="[0-9]{7}" placeholder="뒤 7자리" required>
+        
+            <br>
+        
+            
+            <label for="birthdate">생년월일:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+        
+            <br>
+        
+            
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <br>
+        
+            
+            <label for="phoneNumber1">집전화번호:</label>
+            <select id="phoneNumber1" name="phoneNumber1" required>
+              <option value="02">02</option>
+              <option value="053">053</option>
+              <option value="051">051</option>
+            </select>
+            -
+            <input type="text" id="phoneNumber2" name="phoneNumber2" pattern="[0-9]{3}" placeholder="000" required>
+            -
+            <input type="text" id="phoneNumber3" name="phoneNumber3" pattern="[0-9]{4}" placeholder="000" required>
+        
+            <br>
+        
+            
+            <label for="mobilePhone1">휴대폰 번호:</label>
+            <select id="mobilePhone1" name="mobilePhone1" required>
+            <option value="010">010</option>
+            <option value="011">011</option>
+            <option value="012">012</option>
+            <option value="070">070</option>
+            </select>
+            -
+            <input type="text" id="mobilePhone2" name="mobilePhone2" pattern="[0-9]{4}" placeholder="0000" required>
+            -
+            <input type="text" id="mobilePhone3" name="mobilePhone3" pattern="[0-9]{4}" placeholder="0000" required>
+            <button type="button" onclick="sendVerificationCode()">전화번호 인증</button>
+            <br>
+        
+            
+            <label for="address">집 주소:</label>
+            <input type="text" id="address" name="address" placeholder="주소 검색">
+            <button type="button" onclick="searchAddress()">도로명주소 조회</button>
+        
+            <br>
+        
+            
+            <label for="detailAddress">상세 주소:</label>
+            <input type="text" id="detailAddress" name="detailAddress">
+        
+            <br>
+        
+            
+            <label>알게된 경로:</label>
+            <input type="checkbox" id="online" name="source" value="online">
+            <label for="online">온라인 광고</label>
+            <input type="checkbox" id="friend" name="source" value="friend">
+            <label for="friend">친구 추천</label>
+            <input type="checkbox" id="other" name="source" value="other">
+            <label for="other">기타</label>
+        
+            <br>
+        
+            
+            <input type="submit" value="회원가입">
+          </form>
+    </div>    
+   
+</body>
+</html>

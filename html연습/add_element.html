@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="add">요소 추가</button>
+    <div id="para"></div>
+
+    <script>
+        // 요소 추가 :: append() , prepend()
+
+        $(function(){
+            $("#add").click(function(){
+                $("#para").prepend(`<p>p 태그가 추가됨<p>`); 
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서</title>
+    <style>
+        #content {
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <!-- 여기에 내용을 추가하세요 -->
+        <p>이것은 사라졌다 나타나는 콘텐츠입니다.</p>
+    </div>
+    <button onclick="콘텐츠토글()">버튼</button>
+
+    <script>
+        function 콘텐츠토글() {
+            var 콘텐츠 = document.getElementById("content");
+            if (콘텐츠.style.opacity === "0") {
+                // 콘텐츠가 숨겨져 있으면 나타나게 함
+                콘텐츠.style.opacity = "1";
+            } else {
+                // 콘텐츠가 보이면 숨기게 함
+                콘텐츠.style.opacity = "0";
+            }
+            // 버튼 클릭을 알리는 경고창 표시
+            alert("버튼이 클릭되었습니다!");
+        }
+    </script>
+</body>
+</html>

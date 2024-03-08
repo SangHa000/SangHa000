@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+</head>
+<body>
+    <script>
+        // 학생 객체를 저장할 변수
+        var student = {
+            이름: "",
+            나이: 0,
+            성별: "",
+            혈액형: "",
+            키: 0
+        };
+
+        // 버튼 클릭 시 학생 정보를 입력받고 목록에 출력하는 함수
+        function showStudentInfo() {
+            // 입력 받기
+            student.이름 = prompt("이름을 입력하세요:");
+            student.나이 = parseInt(prompt("나이를 입력하세요:"));
+            student.성별 = prompt("성별을 입력하세요:");
+            student.혈액형 = prompt("혈액형을 입력하세요:");
+            student.키 = parseFloat(prompt("키를 입력하세요:"));
+
+            // 목록에 출력
+            var outputList = document.getElementById("outputList");
+            outputList.innerHTML = ""; // 기존 목록 초기화
+
+            for (var key in student) {
+                outputList.innerHTML += "<li><strong>" + key + ":</strong> " + student[key] + "</li>";
+            }
+
+            // 데이터가 없음을 알리는 메시지
+            if (Object.values(student).every(value => !value)) {
+                alert("입력된 데이터가 없습니다.");
+            }
+        }
+    </script>
+
+    <!-- 버튼과 출력을 담당하는 목록 태그 -->
+    <button onclick="showStudentInfo()">학생 정보 출력</button>
+    <ul id="outputList"></ul>
+</body>
+</html>

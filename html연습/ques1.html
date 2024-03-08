@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let n1 = parseFloat(prompt("첫 번째 숫자를 입력하세요:"));
+        let c = prompt("연산자를 입력하세요 (+, -, *, /, %, q):");
+        let n2 = parseFloat(prompt("두 번째 숫자를 입력하세요:"));
+
+        let result = calculate(n1, n2, c);
+
+        document.write("<p>계산 결과: " + result + "</p>");
+
+            // 결과 출력
+            if (result !== null) {
+                console.log("결과:", result);
+            } else {
+                console.log("올바르지 않은 연산자 또는 나누기 연산에서 두 번째 숫자가 0입니다.");
+            }
+
+
+        function calculate(n1,n2,c){
+                    switch (c) {
+            case '+':
+                return n1 + n2;
+            case '-':
+                return n1 - n2;
+            case '*':
+                return n1 * n2;
+            case '/':
+                if (n2 !== 0) {
+                return n1 / n2;
+                } else {
+                return '나누기는 0으로 할 수 없습니다.';
+                }
+            case '%':
+                return n1%n2;
+            case 'q':
+                return null;
+            default:
+                return '올바르지 않은 연산자입니다.';
+            }
+        }
+
+
+    </script>
+</body>
+</html>

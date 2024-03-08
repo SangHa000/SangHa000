@@ -1,0 +1,53 @@
+div{
+    text-align: center;
+    margin: auto;
+}
+
+/*
+transition :: "전환"과 관련된 스타일 부여
+*/
+
+p{
+    border: 3px solid black;
+    display: inline-block;
+    padding: 5px 25px;
+    height: 200px;
+
+    transition: all 0.5s ease;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+
+}
+
+/*  반응 선택자 ::  
+    ":active(마우스를 눌렀을때 스타일 적용)"
+    ":hover(커서를 갖다댔을때 스타일 적용)"
+    [선택자]:hover/active {선언문}
+*/
+#do:hover{
+    background-color: red;
+}
+#re:hover{
+    background-color: orange;
+}
+#mi:hover{
+    background-color: yellow;
+}
+#pa:hover{
+    background-color: green;
+}
+#sol:hover{
+    background-color: blue;
+}
+#la:hover{
+    background-color: indigo;
+}
+#si:hover{
+    background-color: purple;
+}
+
+p:active{
+    color: white;
+    height: 300px;
+    font-size: larger;
+}
